@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОГЭ по информатике — подготовка</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">ОГЭ<span>Инфо</span></a>
+            <div class="d-flex align-items-center gap-2 order-lg-last">
+                <button id="themeToggle" class="theme-toggle" title="Сменить тему">
+
+                    <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                        class="bi bi-moon-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                    </svg>
+                </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="assets/subjects.html">Задания</a></li>
+                    <li class="nav-item"><a class="nav-link" href="assets/schedule.html">План</a></li>
+                    <li class="nav-item"><a class="nav-link" href="assets/resources.html">Ресурсы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="assets/tips.html">Советы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="assets/faq.html">Вопросы</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <div class="badge-custom mb-3">ОГЭ 2026</div>
+                        <h1 class="display-4 fw-bold mb-3">Подготовка к ОГЭ по информатике</h1>
+                        <p class="lead text-muted mb-4">
+                            Всё, что нужно для успешной сдачи: разбор заданий, план подготовки, проверенные ресурсы и
+                            лайфхаки. Без воды и лишней теории.
+                        </p>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="assets/subjects.html" class="btn btn-primary-custom">Начать подготовку →</a>
+                            <a href="assets/schedule.html" class="btn btn-outline-custom">Составить план</a>
+                        </div>
+                        <div class="row mt-4 g-3">
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <div class="stat-number">15</div>
+                                    <div class="stat-label">заданий</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <div class="stat-number">100+</div>
+                                    <div class="stat-label">советов</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="calculator-card p-4">
+                            <h5 class="mb-3">Калькулятор баллов</h5>
+                            <p class="small text-muted">Выбери количество решённых заданий — узнай примерную оценку.</p>
+                            <div class="mb-3">
+                                <label class="form-label small">Решено заданий: <span id="calcValue"
+                                        class="fw-bold">8</span></label>
+                                <input type="range" id="calcRange" class="form-range" min="0" max="19" value="8">
+                            </div>
+                            <div class="result-box p-3 text-center">
+                                <div class="small text-muted">Примерная оценка</div>
+                                <div id="calcResult" class="fs-2 fw-bold" style="color: var(--primary);">4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- СТРУКТУРА ЭКЗАМЕНА -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title">Структура экзамена</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card-custom">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                    fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
+                                    <path
+                                        d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                                </svg></div>
+                            <h5>Часть 1</h5>
+                            <p class="text-muted small">10 заданий с кратким ответом. Теория, логика, системы счисления.
+                            </p>
+                            <span class="badge-custom">10 баллов</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card-custom">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                    fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5" />
+                                </svg></div>
+                            <h5>Часть 2</h5>
+                            <p class="text-muted small">5 заданий с развёрнутым ответом. Программирование, таблицы,
+                                алгоритмы.</p>
+                            <span class="badge-custom">9 баллов</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card-custom">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                    fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                                </svg></div>
+                            <h5>Время</h5>
+                            <p class="text-muted small">3 часа 55 минут. Рекомендуем распределить время по заданиям
+                                заранее.</p>
+                            <span class="badge-custom">235 минут</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card-custom">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                    fill="currentColor" class="bi bi-bullseye" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                    <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10m0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12" />
+                                    <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8" />
+                                    <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                                </svg></div>
+                            <h5>Порог</h5>
+                            <p class="text-muted small">Минимум 5 баллов для тройки. Для уверенной четвёрки — от 10
+                                баллов.</p>
+                            <span class="badge-custom">5 / 10 / 15</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ТРЕКЕР ПРОГРЕССА -->
+        <section class="py-5" style="background: var(--bg-light);">
+            <div class="container">
+                <h2 class="section-title">Твой прогресс</h2>
+                <p class="text-muted mb-4">Отмечай пройденные темы. Прогресс сохраняется в браузере.</p>
+                <div class="progress-tracker p-4"
+                    style="background: var(--bg-card); border-radius: var(--border-radius); box-shadow: var(--shadow);">
+                    <div class="progress-track mb-3">
+                        <div class="progress-fill" id="progressBar"
+                            style="width: 0%; background: linear-gradient(90deg, var(--primary), var(--accent));"></div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span id="progressText">0 из 0</span>
+                        <span id="progressEmoji">начинаем</span>
+                    </div>
+                </div>
+                <div class="row g-3 mt-3" id="checklist">
+                    <div class="col-md-6 col-lg-4">
+                        <label class="check-item">
+                            <input type="checkbox" data-task="1">
+                            <span class="check-box"></span>
+                            <span>Скачал демоверсию с ФИПИ</span>
+                        </label>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <label class="check-item">
+                            <input type="checkbox" data-task="2">
+                            <span class="check-box"></span>
+                            <span>Разобрал системы счисления</span>
+                        </label>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <label class="check-item">
+                            <input type="checkbox" data-task="3">
+                            <span class="check-box"></span>
+                            <span>Выучил основные алгоритмы</span>
+                        </label>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <label class="check-item">
+                            <input type="checkbox" data-task="4">
+                            <span class="check-box"></span>
+                            <span>Решил 5 вариантов целиком</span>
+                        </label>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <label class="check-item">
+                            <input type="checkbox" data-task="5">
+                            <span class="check-box"></span>
+                            <span>Научился работать с таблицами</span>
+                        </label>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <label class="check-item">
+                            <input type="checkbox" data-task="6">
+                            <span class="check-box"></span>
+                            <span>Написал первую программу на Python</span>
+                        </label>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <label class="check-item">
+                            <input type="checkbox" data-task="7">
+                            <span class="check-box"></span>
+                            <span>Разобрал задание 15 (программирование)</span>
+                        </label>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <label class="check-item">
+                            <input type="checkbox" data-task="8">
+                            <span class="check-box"></span>
+                            <span>Решил 10+ вариантов</span>
+                        </label>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <label class="check-item">
+                            <input type="checkbox" data-task="9">
+                            <span class="check-box"></span>
+                            <span>Готов на 100%</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ТАЙМЕР ПОМОДОРО -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="section-title text-start">Таймер Помодоро</h2>
+                        <p class="text-muted">25 минут работы — 5 минут отдыха. Оптимальный режим для подготовки. Через
+                            4 цикла — большой перерыв.</p>
+                        <div class="p-3" style="background: var(--bg-light); border-radius: 16px;">
+                            <p class="small mb-0"><strong>Совет:</strong> за один цикл можно разобрать 2-3 задания или
+                                написать небольшую программу.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="pomodoro-card p-4"
+                            style="background: var(--bg-card); border-radius: var(--border-radius); box-shadow: var(--shadow); text-align: center;">
+                            <div class="d-flex gap-2 justify-content-center mb-3">
+                                <button class="mode-btn active" data-mode="work">Работа</button>
+                                <button class="mode-btn" data-mode="break">Отдых</button>
+                            </div>
+                            <div class="pomodoro-display display-1 fw-bold" id="pomodoroDisplay"
+                                style="color: var(--primary);">25:00</div>
+                            <div class="d-flex gap-3 justify-content-center mt-3">
+                                <button id="pomodoroStart" class="btn btn-primary-custom">Старт</button>
+                                <button id="pomodoroReset" class="btn btn-outline-custom">Сброс</button>
+                            </div>
+                            <div class="mt-3">
+                                <span class="text-muted small">Сессий сегодня: </span>
+                                <span id="sessionCount" class="fw-bold">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- С ЧЕГО НАЧАТЬ -->
+        <section class="py-5" style="background: var(--bg-light);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="section-title">С чего начать прямо сейчас</h2>
+                        <p class="text-muted mb-4 text-center">
+                            Пошаговый план для тех, кто хочет подготовиться к ОГЭ по информатике без репетитора.
+                        </p>
+                        <ol class="steps-list">
+                            <li>Скачай демоверсию и кодификатор с сайта ФИПИ — пойми, что от тебя требуют.</li>
+                            <li>Изучи системы счисления (задание 10) — это база, без которой сложно дальше.</li>
+                            <li>Начни с простых заданий (1-5) — они дают до 5 баллов без особых усилий.</li>
+                            <li>Освой работу с электронными таблицами (задание 12-13) — это почти всегда решаемо.</li>
+                            <li>Потренируйся писать простые программы на Python (задание 15).</li>
+                            <li>Решай варианты целиком — засекай время и разбирай ошибки.</li>
+                        </ol>
+                        <div class="mt-4 p-4 border-start border-4"
+                            style="border-color: var(--primary) !important; background: var(--bg-card); border-radius: 16px;">
+                            <h5>Важно</h5>
+                            <p class="mb-0">Не пытайся выучить всё сразу. Лучше качественно разобрать 10 заданий, чем
+                                поверхностно пройти все 15.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 mt-5" style="background: var(--bg-card); border-top: 2px solid rgba(44,62,143,0.08);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6 style="font-weight: 700;">ОГЭИнфо</h6>
+                    <p class="small text-muted mb-0">Сайт для подготовки к ОГЭ по информатике. Всё по делу, без паники.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small text-muted mb-0">2026 · Сделано с умом</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="toTop" class="to-top-btn">↑</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/main.js"></script>
+</body>
+
+</html>

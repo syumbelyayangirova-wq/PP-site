@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ресурсы для подготовки</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">ОГЭ<span>Инфо</span></a>
+            <div class="d-flex align-items-center gap-2 order-lg-last">
+                <button id="themeToggle" class="theme-toggle" title="Сменить тему">
+                    <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+                        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                    </svg>
+                </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="subjects.html">Задания</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schedule.html">План</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="resources.html">Ресурсы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tips.html">Советы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">Вопросы</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-5">
+        <div class="container">
+            <h1 class="display-5 fw-bold mb-3">Полезные ресурсы</h1>
+            <p class="lead text-muted mb-5">Проверенные сайты, каналы и материалы для подготовки. Переходи и пользуйся!
+            </p>
+
+            <div class="row g-4">
+                <!-- ФИПИ -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-custom resource-link">
+                        <a href="https://fipi.ru/oge" target="_blank" rel="noopener noreferrer"
+                            class="resource-link-wrap">
+                            <div class="resource-icon">📄</div>
+                            <h5>ФИПИ</h5>
+                            <p class="text-muted small">Официальный сайт. Демоверсии, кодификаторы, открытый банк
+                                заданий.</p>
+                            <span class="badge-custom">Обязательно</span>
+                            <div class="link-arrow">→</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Решу ОГЭ -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-custom resource-link">
+                        <a href="https://inf-oge.sdamgia.ru/" target="_blank" rel="noopener noreferrer"
+                            class="resource-link-wrap">
+                            <div class="resource-icon">🌐</div>
+                            <h5>Решу ОГЭ</h5>
+                            <p class="text-muted small">Варианты с автоматической проверкой. Удобно для тренировки.</p>
+                            <span class="badge-custom">Популярно</span>
+                            <div class="link-arrow">→</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Python.org -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-custom resource-link">
+                        <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer"
+                            class="resource-link-wrap">
+                            <div class="resource-icon">🐍</div>
+                            <h5>Python.org</h5>
+                            <p class="text-muted small">Официальный сайт языка Python. Документация, учебник,
+                                сообщество.</p>
+                            <span class="badge-custom">Для программирования</span>
+                            <div class="link-arrow">→</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Stepik -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-custom resource-link">
+                        <a href="https://stepik.org/catalog/search?q=%D0%BE%D0%B3%D1%8D+%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0"
+                            target="_blank" rel="noopener noreferrer" class="resource-link-wrap">
+                            <div class="resource-icon">📚</div>
+                            <h5>Stepik</h5>
+                            <p class="text-muted small">Бесплатные курсы по информатике и программированию.</p>
+                            <span class="badge-custom">Курсы</span>
+                            <div class="link-arrow">→</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5 p-4"
+                style="background: var(--bg-card); border-radius: 16px; border-left: 4px solid var(--primary);">
+                <h5>Совет</h5>
+                <p class="mb-0">Не пытайся использовать все ресурсы сразу. Выбери 2-3 и работай с ними регулярно.
+                    Качество важнее количества.</p>
+            </div>
+
+            <!-- Быстрые ссылки -->
+            <div class="mt-5">
+                <h5 class="mb-3">Быстрые переходы</h5>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="https://fipi.ru/oge" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary-custom">ФИПИ</a>
+                    <a href="https://inf-oge.sdamgia.ru/" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary-custom">Решу ОГЭ</a>
+                    <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary-custom">Python.org</a>
+                    <a href="https://stepik.org/catalog/search?q=%D0%BE%D0%B3%D1%8D+%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-primary-custom">Stepik</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-4 mt-5" style="background: var(--bg-card); border-top: 2px solid rgba(44,62,143,0.08);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6 style="font-weight: 700;">ОГЭИнфо</h6>
+                    <p class="small text-muted mb-0">Сайт для подготовки к ОГЭ по информатике.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small text-muted mb-0">2026</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
